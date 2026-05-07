@@ -3,14 +3,14 @@ package stringBuilder;
 public class CheckPalindrome {
     static void main() {
         String str = "abdcdba";
-        if (checkPalindrome(str) == 1) {
+        if (checkPalindrome(str)) {
             System.out.println(str + " is a Palindrome");
         } else {
             System.out.println(str + " is not a Palindrome");
         }
 
     }
-    static int checkPalindrome(String str) {
+    static boolean checkPalindrome(String str) {
         String[] strArr = str.split("");
         int start = 0;
         int end = strArr.length - 1;
@@ -19,9 +19,9 @@ public class CheckPalindrome {
                 start++;
                 end--;
             }else  {
-                return -1;
+                return false;
             }
         }
-        return 1;
+        return true;
     }
 }
